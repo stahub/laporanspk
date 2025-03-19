@@ -35,7 +35,7 @@
             padding: .4rem 2rem;
         }
         header ul {
-            border-bottom: 1px solid rgba(242, 242, 242, 1);
+            /* border-bottom: 1px solid rgba(242, 242, 242, 1); */
             list-style-type: none;
             margin: 0;
             overflow: hidden;
@@ -95,23 +95,14 @@
             background-color: rgba(221, 72, 20, .8);
             color: rgba(255, 255, 255, .8);
         }
-        header .heroe {
-            margin: 0 auto;
-            max-width: 1100px;
-            padding: 1rem 1.75rem 1.75rem 1.75rem;
-        }
-        header .heroe h1 {
-            font-size: 2.5rem;
-            font-weight: 500;
-        }
-        header .heroe h2 {
-            font-size: 1.5rem;
-            font-weight: 300;
-        }
+
         section {
-            border-style: solid;
-            border-width: medium;
-            margin: 0 auto;
+            display: block;
+            height: 230px;
+            border-style: ridge;
+            border-width: 1px;
+            border-radius: 8px;
+            margin: 2.5rem auto;
             max-width: 500px;
             padding: 2.5rem 1.75rem 3.5rem 1.75rem;
         }
@@ -144,6 +135,9 @@
             margin-right: 5px;
             width: 25px;
         }
+        .login-content {
+            
+        }
         input[type=text], input[type=password] {
             width: 100%;
             padding: 12px 20px;
@@ -172,12 +166,58 @@
             }
 
             /* Change styles for span and cancel button on extra small screens */
-            @media screen and (max-width: 1300px) {
+            @media screen and (max-width: 3300px) {
             section {
-                border-style: none;
-            
+                /* margin: 10% auto; */
+                /* margin-bottom: 27%; */
+            }   
+            }
+            @media screen and (max-width: 2500px) {
+            section {
+                margin-top: 5.5rem;
+                /* margin: 9% auto; */
+            } 
+            }
+            @media  screen and (max-width: 1500px) {
+            section {
+                /* margin: 30% auto; */
+                border-width: 0px;
+            }
+            }
+            @media screen and (max-width: 600px) {
+            section {
+                /* margin: 0 auto; */
+                /* margin-top: 40%; */
+                border-width: 0px;
+            }
+            }
+            @media screen and (max-height: 690px) {
+            section {
+                margin: 0 auto;
+            }
+                footer{
+                display: none;
+            }
+            }
+            @media screen and (max-width: 400px) {
+            section {
+                margin: 0 auto;
+                padding-top: 20px;
+                border-width: 0px;
+            }
+            }
+            @media screen and (max-width: 340px) {
+            section {
+                margin: 0 auto;
+                padding-top: 10px;
+                border-width: 0px;
+            }
             }
             @media screen and (max-width: 300px) {
+            section {
+                margin: 0 auto;
+                border-width: 0px;
+            }
             span.psw {
                 display: block;
                 float: none;
@@ -198,18 +238,20 @@
             stroke-width: 32px;
         }
         footer {
-            position: relative;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
             background-color: rgba(221, 72, 20, .8);
             text-align: center;
         }
         footer .environment {
             color: rgba(255, 255, 255, 1);
-            padding: 2rem 1.75rem;
+            padding: 1.6rem 1.75rem;
         }
         footer .copyrights {
             background-color: rgba(62, 62, 62, 1);
             color: rgba(200, 200, 200, 1);
-            padding: .25rem 1.75rem;
+            padding: .15rem 1.75rem;
         }
         @media (max-width: 629px) {
             header ul {
@@ -270,9 +312,11 @@
 
 <!-- CONTENT -->
 
-<section>
+<div class="login-content">
 
-    <form action="" method="post">
+    <section>
+
+    <form action="/" method="post">
         <div class="container">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
@@ -291,7 +335,9 @@
         </div>
     </form>
 
-</section>
+    </section>
+
+</div>
 
 <!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
 
